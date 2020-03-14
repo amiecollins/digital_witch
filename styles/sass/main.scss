@@ -1,0 +1,128 @@
+// sass --watch styles/sass:styles/css --style compressed
+@import '_vars.scss';
+@import '_reset.scss';
+
+.hidden {
+    display: none;
+}
+
+.main-bg {
+    height: 100%;
+    width: auto;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0% 10%;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.header-nav {
+    width: 400px;
+}
+
+.header-nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto 0;
+    padding: 15px;
+}
+
+.header-nav ul li {
+    font-family: $subtitle-caps-font;
+    text-transform: lowercase;
+    font-size: 25px;
+}
+
+a {
+    color: $theme1;
+    transition: 0.5s;
+}
+
+a:hover {
+    color: $theme1;
+    opacity: 0.2;
+    text-shadow: 0px 0px 3px rgba(0,0,0,0.5);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+}
+
+.main {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10%;
+    margin: 30% 10%;
+}
+
+.main h1 {
+    font-family: $header-font;
+    font-size: 72px;
+    color: black;
+    text-align: center;
+}
+
+.sub {
+    font-family: $subtitle-font;
+    font-size: 40px;
+    text-align: center;
+}
+
+p {
+    font-family: $main-font;
+    font-size: 30px;
+    margin: 30px 10px;
+}
+
+.fb-like {
+    margin: 0 auto; 
+}
+
+.contact {
+    font-size: 24px;
+}
+
+.fbpic {
+    width: 90px;
+    height: 90px;
+    padding: 0px;
+    margin-right: 10px;
+}
+
+ 
+@media screen and (min-width: 750px) {
+    
+    .main {
+        margin: 20% 10%;
+    }
+
+}
+
+
+@media screen and (min-width: 1600px) {
+
+    .main {
+        margin: 10% 10%;
+    }
+
+    .main-bg {
+        width: 100%;
+        height: auto;
+    }
+}

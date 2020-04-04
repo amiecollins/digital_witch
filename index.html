@@ -3,33 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Digital Witch</title>
     <link rel="stylesheet" href="https://use.typekit.net/tbt1yjd.css">
     <link rel="stylesheet" href="./styles/css/main.css">
 </head>
+
 <body>
     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0&appId=869060906861402&autoLogAppEvents=1"></script>
-    <header><div class="header"><h2 class="hidden">Welcome to Digital Witch Designs - we don't bite</h2>
-        <img class="logo" src="./media/logo.svg" alt="Digital Witch logo">
-        <nav class="header-nav"><h3 class="hidden">Main Navigation</h3>
-            <ul>
-                <li><a href="www.digitalwitch.ca">Home</a></li>
-                <li><a href="https://www.facebook.com/digitalwitchdesigns/">Facebook</a></li>
-                <li><a href="https://www.instagram.com/digitalwitchdesigns/">Instagram</a></li>
-            </ul>
-        </nav>
-    </div></header>
-    <div class="main">
-        <h1 class="title">Magic is brewing, </h1><h2 class="sub">your patience is appriciated</h2>
-        <p>
-            Please like & follow the Digital Witch Facebook page for the latest updates! If you like what you see, share and invite your friends. We are stronger together.
-        </p>
-        <img class="logo fbpic" src="./media/logo.svg" alt="Digital Witch logo"><div class="fb-like" data-href="https://www.facebook.com/digitalwitchdesigns/" data-width="" data-layout="button" data-action="like" data-size="large" data-share="true"></div>
-        <p class="contact">
-            if you'd like to contact me you can email <a href="mailto:digitalwitch@amiecollins.ca">digitalwitch@amiecollins.ca</a> or messsage @digitalwitchdesigns on <a href="https://www.facebook.com/digitalwitchdesigns/">Facebook</a> or <a href="https://www.instagram.com/digitalwitchdesigns/">Instagram</a>. 
-        </p>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0&appId=214321166293889&autoLogAppEvents=1"></script>
+    <header>
+        <img class="logo" :src="main.logo" alt="Digital Witch Designs Logo"><h1 class="title" v-text="main.title"></h1><img class="burgermenu" :src="burger.img" alt="Burger Menu Activation" @click="burger.active = true">
+
+        <div class="menu">
+            <div class="menu-exit" @click="burger.active = false">Exit Menu</div>
+            <search v-model:query="burger.search.query" v-model:results="burger.search.results"></search>
+            <results v-model:results="burger.search.results" v-if="burger.search.query != ''"></results>
+            <nav>
+                <h3 class="hidden">Main Navigation</h3>
+                <ul v-if="burger.search.query === ''" class="menu-links">
+                    <li v-for="link in main.pagelinks"><div class="menu-link" v-text="link.text" @click="setpage(link.url)"></div></li>
+                </ul>
+                <links :links="main.sociallinks"></links>
+            </nav>
+        </div>
+
+    </header>
+    <div id="main-container">
+        <home setpage="setpage" ></home>
+        <products></products>
+        <contact></contact>
+        <socialmedia :links="main.sociallinks">
+            <section id="social">
+                <div class="social-container">
+
+                    <div class="social-text">
+                        <h2>Interested in Digital Witch?</h2>
+                        <p>We are available on various social media platforms to keep updated with everything new we have to offer!</p>
+                        <links :links="links"></links>
+                        <div class="social-buttons">
+                            <div class="fb-like" data-href="https://www.facebook.com/digitalwitchdesigns/" data-width="" data-layout="button" data-action="like" data-size="small" data-share="true"></div>
+                            <a href="https://twitter.com/digitalwitchdes?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </div>
+                    </div>
+
+                    <div class="social-feeds">
+
+                        <div class="fb-page" data-href="https://www.facebook.com/digitalwitchdesigns/" data-tabs="timeline" data-width="300" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/digitalwitchdesigns/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/digitalwitchdesigns/">Digital Witch</a></blockquote></div>
+
+                        <div class="fb-group" data-href="https://www.facebook.com/groups/214955102933772/" data-width="300" data-show-social-context="true" data-show-metadata="true"></div>
+
+                        <a class="twitter-timeline" data-width="300" href="https://twitter.com/digitalwitchdes?ref_src=twsrc%5Etfw">Tweets by digitalwitchdes</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+                    </div>
+
+                </div>
+            </section>
+            
+
+        </socialmedia>
     </div>
+    <footer>
+        <links :links="main.sociallinks"></links><span class="copyright">&copy; 2020 Digital Witch Designs</span>
+    </footer>
     <img src="media/bg.gif" alt="background space scape" class="main-bg">
 </body>
 <script src="./js/index.js" type="module"></script>

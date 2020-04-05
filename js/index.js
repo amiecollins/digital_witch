@@ -62,7 +62,7 @@ const vueIndex = (() => {
                 ],
             },
             burger: {
-                img: "",
+                img: "./media/icons/burger.svg",
                 active: false,
                 search: {
                     query: "",

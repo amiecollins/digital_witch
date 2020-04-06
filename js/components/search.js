@@ -4,7 +4,7 @@ import products from '../data/products.js'
 export default {
     data: function () {
         return {
-            
+            icon: "./media/icons/search.svg"
         }
     },
     
@@ -42,7 +42,7 @@ export default {
     },
     
     created: function () {
-        this.search();
+        // this.search();
     },
     
 

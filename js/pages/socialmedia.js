@@ -1,3 +1,6 @@
+import links from '../components/links.js'
+
+
 export default {
     data: function () {
         return {
@@ -12,6 +15,10 @@ export default {
     props: [
         "links"
     ],
+
+    components: {
+        links
+    },
 
     template: `
     <section id="social">

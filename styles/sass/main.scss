@@ -52,10 +52,6 @@ header, footer {
     z-index: 10;
 }
 
-header img {
-    padding: 15px;
-}
-
 header h1 {
     margin: auto auto auto 0;
 }
@@ -80,20 +76,63 @@ header img {
     position: fixed;
     top: 0;
     right: 0;
-    max-width: 350px;
-    padding: 20px;
+    max-width: 90%;
+    height: 100%;
+    padding: 20% 5%;
     background-color: $backgroundcolor;
     text-align: center;
     font-family: $headerfont;
     font-size: 32px;
+    overflow-y: auto;
+}
+
+.link-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.link {
+    width: 35px;
+    height: 35px;
+    transition: 0.2s;
+}
+
+.link:hover {
+    opacity: 0.5;
 }
 
 .menu nav .link-container {
-    max-height: 80px;
-    .link {
-        max-width: 30px;
+    height: 30px;
+    margin: 20px 0px;
+    li {
+        width: 30px;
+        height: 30px;
+        .link {
+            width: 30px;
+            height: 30px;
+        }
     }
 }
+
+
+footer .link-container {
+    width: 50%;
+    li {
+        width: 20px;
+        height: 20px;
+        margin: 10px;
+        .link {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
 
 .main-container {
     display: flex;
@@ -101,6 +140,27 @@ header img {
     width: 100%;
     height: auto;
     padding: 100px 15px;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.search-icon {
+    max-width: 25px;
+    margin: 5px 5px;
+}
+
+.search-input {
+    max-width: 80%;
+    max-height: 25px;
+    margin: 5px 5px;
+    font-size: 20px;
+    font-family: $subtitlefont;
 }
 
 

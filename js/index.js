@@ -13,8 +13,8 @@ const vueIndex = (() => {
 
         data: {
             main: {
-                logo: "",
-                title: "",
+                logo: "./media/icons/logo.svg",
+                title: "Digital Witch.ca",
                 pagelinks: [
                     {
                         text: "Home",
@@ -70,6 +70,10 @@ const vueIndex = (() => {
 
                     ]
                 }
+            },
+            background: {
+                src: "./media/bg.gif",
+                alt: "Background Spacescape"
             }
         },
 

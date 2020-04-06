@@ -8,7 +8,12 @@ export default {
                     text: "",
                     url: ""
                 }
-            ]
+            ],
+            introduction: "",
+            amie: {
+                link: "www.amiecollins.ca",
+                logo: ""
+            }
         }
     },
     
@@ -25,7 +30,7 @@ export default {
     },
 
     template: `
-    <section id="home" setpage="setpage" :sociallinks="main.sociallinks">
+    <section id="home">
 
         <div class="home-welcome">
             <h2>Welcome to <span class="home-name">Digital Witch Designs</span></h2>
@@ -38,8 +43,8 @@ export default {
         </ul>
 
         <div class="home-lookingfor">
-            <div class="amie.top">
-                <div class="amie.text">
+            <div class="amie-top">
+                <div class="amie-text">
                     <h3>Are you Looking For Web Development or Graphic Design?</h3>
                     <p>Check out my portfolio at <a :href="amie.link">www.amiecollins.ca</a></p>
                 </div>

@@ -11,33 +11,46 @@
 <body>
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0&appId=214321166293889&autoLogAppEvents=1"></script>
-    <header>
-        <img class="logo" :src="main.logo" alt="Digital Witch Designs Logo"><h1 class="title" v-text="main.title"></h1><img class="burgermenu" :src="burger.img" alt="Burger Menu Activation" @click="burger.active = true">
+    
+    <div id="index">
 
-        <div class="menu">
-            <div class="menu-exit" @click="burger.active = false">Exit Menu</div>
-            <search v-model:query="burger.search.query" v-model:results="burger.search.results"></search>
-            <results v-model:results="burger.search.results" v-if="burger.search.query != ''"></results>
-            <nav>
-                <h3 class="hidden">Main Navigation</h3>
-                <ul v-if="burger.search.query === ''" class="menu-links">
-                    <li v-for="link in main.pagelinks"><div class="menu-link" v-text="link.text" @click="setpage(link.url)"></div></li>
-                </ul>
-                <links :links="main.sociallinks"></links>
-            </nav>
+
+        <header>
+            <img class="logo" :src="main.logo" alt="Digital Witch Designs Logo">
+            <h1 class="title" v-text="main.title"></h1>
+            <img class="burgermenu" :src="burger.img" alt="Burger Menu Activation" @click="burger.active = true">
+
+            <div class="menu" v-show="burger.active">
+                <h2 class="hidden">Collapsing Menu</h2>
+                <h3 class="menu-exit" @click="burger.active = false">Exit Menu</h3>
+                <search v-model:query="burger.search.query" v-model:results="burger.search.results"></search>
+                <results v-model:results="burger.search.results" v-if="burger.search.query != ''"></results>
+                <nav>
+                    <h3 class="hidden">Main Navigation</h3>
+                    <ul v-if="burger.search.query === ''" class="menu-links">
+                        <li v-for="link in main.pagelinks"><div class="menu-link" v-text="link.text" @click="setpage(link.url)"></div></li>
+                    </ul>
+                    <links :links="main.sociallinks"></links>
+                </nav>
+            </div>
+        </header>
+
+
+        <div id="main-container">
+            <home setpage="setpage" :sociallinks="main.sociallinks"></home>
+            <products></products>
+            <contact></contact>
+            <socialmedia :links="main.sociallinks"></socialmedia>
         </div>
 
-    </header>
-    <div id="main-container">
-        <home setpage="setpage" ></home>
-        <products></products>
-        <contact></contact>
-        <socialmedia :links="main.sociallinks"></socialmedia>
+
+        <footer>
+            <links :links="main.sociallinks"></links><span class="copyright">&copy; 2020 Digital Witch Designs</span>
+        </footer>
+
+        <img :src="background.src" :alt="background.alt" class="main-bg">
     </div>
-    <footer>
-        <links :links="main.sociallinks"></links><span class="copyright">&copy; 2020 Digital Witch Designs</span>
-    </footer>
-    <img src="media/bg.gif" alt="background space scape" class="main-bg">
+
 </body>
 <script src="./js/index.js" type="module"></script>
 </html>

@@ -1,6 +1,20 @@
-$main-font: itc-american-typewriter-cond, serif;
-$subtitle-font: english, sans-serif;
-$subtitle-caps-font: english-small-caps, sans-serif;
-$header-font: goodlife-brush, sans-serif;
-$header-font-2: goodlife-sans-condensed, sans-serif;
-$theme1: #5A2066;
+$mainfont: itc-american-typewriter-cond, serif;
+$subtitlefont: english, sans-serif;
+$subtitlecapsfont: english-small-caps, sans-serif;
+$scriptfont: goodlife-brush, sans-serif;
+$headerfont: goodlife-sans-condensed, sans-serif;
+
+$spirit: #5A2066;
+$fire: #991B2C;
+$air: #CC8E8A;
+$water: #336974;
+$earth: #999020;
+
+$headercolor: $spirit;
+$subtitlecolor: $fire;
+$highlightcolor: $air;
+$linkcolor: $water;
+$linkcolorhover: $earth;
+
+$backgroundcolor: white;
+$textcolor: black;

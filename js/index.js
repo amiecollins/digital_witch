@@ -1,11 +1,11 @@
 import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.js'
 import links from './components/links.js'
 import search from './components/search.js'
-import results from './components/results.js'
 import home from './pages/home.js'
 import products from './pages/products.js'
 import socialmedia from './pages/socialmedia.js'
 import contact from './pages/contact.js'
+import productsdata from './data/products.js'
 
 const vueIndex = (() => {
 
@@ -63,13 +63,7 @@ const vueIndex = (() => {
             },
             burger: {
                 img: "./media/icons/burger.svg",
-                active: false,
-                search: {
-                    query: "",
-                    results: [
-
-                    ]
-                }
+                active: false
             },
             background: {
                 src: "./media/bg.gif",
@@ -82,11 +76,12 @@ const vueIndex = (() => {
                 var view = document.getElementById(page);
                 view.scrollIntoView();
             }
+            
         },
 
 
         components: {
-            links, search, results, home, products, socialmedia, contact
+            links, search, home, products, socialmedia, contact
         }
 
     }).$mount("#index");

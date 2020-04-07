@@ -1,0 +1,60 @@
+#contact {
+    max-width: 100%;
+    padding: 10px;
+    background-color: $backgroundcolor;
+    margin: 20px 0px;
+}
+
+.contact-title {
+    font-size: 30px;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-item {
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    label {
+        margin-right: 5px;
+        margin-bottom: 5px;
+        text-transform: capitalize;
+    }
+    input, select {
+        font-size: 15px;
+        font-family: $mainfont;
+        padding: 5px;
+        line-height: 20px;
+        text-transform: capitalize;
+    }
+}
+
+#form-message {
+    font-size: 15px;
+    min-height: 100px;
+    max-height: 200px;
+    margin: 10px 0px;
+    font-family: $mainfont;
+}
+
+.form-submit {
+    font-family: $headerfont;
+    background-color: $linkcolor;
+    color: $linkcolorhover;
+    font-size: 30px;
+    line-height: 40px;
+    padding-top: 5px;
+    transition: 1s;
+    border: 0px;
+    text-align: center;
+}
+
+.form-submit:hover {
+    color: $linkcolor;
+    background-color: $linkcolorhover
+}

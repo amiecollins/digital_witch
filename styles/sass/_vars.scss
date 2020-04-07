@@ -18,3 +18,36 @@ $linkcolorhover: $earth;
 
 $backgroundcolor: white;
 $textcolor: black;
+
+body {
+    color: $textcolor;
+    font-family: $mainfont;
+    font-size: 15px;
+}
+
+a {
+    color: $linkcolor;
+    transition: 0.5s;
+}
+
+a:hover {
+    color: $linkcolorhover;
+}
+
+h2 {
+    font-family: $scriptfont;
+    color: $headercolor;
+    font-size: 20px;
+}
+
+h3 {
+    font-family: $headerfont;
+    color: $headercolor;
+    font-size: 20px;
+}
+
+h4 {
+    color: $subtitlecolor;
+    font-size: 20px;
+    font-family: $subtitlefont;
+}

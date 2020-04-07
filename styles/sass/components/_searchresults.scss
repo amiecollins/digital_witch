@@ -1,0 +1,119 @@
+
+
+.search {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-icon {
+    max-width: 25px;
+    margin: 5px 5px;
+    cursor: pointer;
+}
+
+.search-input {
+    max-width: 80%;
+    max-height: 25px;
+    margin: 5px 5px;
+    font-size: 20px;
+    font-family: $subtitlefont;
+}
+.results-contents { 
+    background-color: $backgroundcolor;
+}
+.result {
+    width: 100%;
+    height: auto;
+    transition: 1s;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 20px;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    transition: 1s;
+}
+
+.product-title {
+    font-family: $headerfont;
+    color: $headercolor;
+    font-size: 20px;
+    height: 0px;
+    text-align: center;
+    background-color: $backgroundcolor;
+}
+
+
+.product-info {
+    padding: 10px;
+    background-color: $backgroundcolor;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0px;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.product-button {
+    padding: 3px 10px;
+    color: $backgroundcolor;
+    background-color: $linkcolor;
+    transition: 1s;
+    text-align: center;
+    cursor: pointer;
+}
+
+.product-price {
+    margin: auto 0px;
+}
+
+.product-button:hover {
+    background-color: $linkcolorhover;
+    color: $textcolor;
+}
+
+.product-desc {
+    font-size: 12px;
+    font-style: italic;
+}
+
+.product-desc, .product-details, .product-includes {
+    max-height: 0px;
+    transition: 1s;
+    opacity: 0;
+}
+
+.product-includes {
+    list-style: square inside;
+    font-family: $subtitlefont;
+    font-size: 12px;
+}
+
+.result:hover {
+
+    .product-title {
+        height: auto;
+    }
+
+    .product-image {
+        margin-top: -100%;
+        opacity: 0;
+        display: hidden;
+        user-select: none;
+        z-index: -5;
+    }
+
+    .product-desc, .product-details, .product-includes {
+        max-height: 600px;
+        opacity: 1;
+    }
+}

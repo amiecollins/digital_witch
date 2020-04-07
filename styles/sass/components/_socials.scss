@@ -1,0 +1,42 @@
+#social {
+    max-width: 100%;
+    padding: 10px;
+    background-color: $backgroundcolor;
+    margin: 20px 0px;
+}
+
+.social-text {
+    h2 {
+        font-size: 30px;
+        text-align: center;
+        margin: 10px 0px;
+    }
+    p {
+        margin: 10px 0px;
+    }
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0px;
+    font-size: 30px;
+}
+
+.fb-cta {
+    font-size: 14px;
+    padding: 2px;
+}
+
+.social-feeds {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    div {
+        margin-bottom: 30px;
+    }
+}
+

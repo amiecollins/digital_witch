@@ -20,14 +20,13 @@
             <h1 class="title" v-text="main.title"></h1>
             <img class="burgermenu" :src="burger.img" alt="Burger Menu Activation" @click="burger.active = true">
 
-            <div class="menu" v-show="burger.active">
+            <div class="menu" v-bind:class="{ menushow : burger.active }">
                 <h2 class="hidden">Collapsing Menu</h2>
-                <h3 class="menu-exit" @click="burger.active = false">Exit Menu</h3>
-                <search v-model:query="burger.search.query" v-model:results="burger.search.results"></search>
-                <results v-model:results="burger.search.results" v-if="burger.search.query != ''"></results>
+                <h3 class="menu-exit" @click="burger.active = false">Exit Menu X</h3>
+                <search defaultq=""></search>
                 <nav>
                     <h3 class="hidden">Main Navigation</h3>
-                    <ul v-if="burger.search.query === ''" class="menu-links">
+                    <ul class="menu-links">
                         <li v-for="link in main.pagelinks"><div class="menu-link" v-text="link.text" @click="setpage(link.url)"></div></li>
                     </ul>
                     <links :links="main.sociallinks"></links>
@@ -37,7 +36,7 @@
 
 
         <div id="main-container">
-            <home setpage="setpage" :sociallinks="main.sociallinks"></home>
+            <home v-bind:setpage="setpage" :sociallinks="main.sociallinks"></home>
             <products></products>
             <contact></contact>
             <socialmedia :links="main.sociallinks"></socialmedia>
@@ -45,12 +44,15 @@
 
 
         <footer>
-            <links :links="main.sociallinks"></links><span class="copyright">&copy; 2020 Digital Witch Designs</span>
+            <links :links="main.sociallinks"></links><div class="copyright">&copy; 2020 Digital Witch Designs</div>
         </footer>
 
         <img :src="background.src" :alt="background.alt" class="main-bg">
     </div>
 
 </body>
+
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script src="./js/index.js" type="module"></script>
 </html>

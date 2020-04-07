@@ -1,0 +1,66 @@
+.home-welcome, .home-links, .home-new {
+    background-color: $backgroundcolor;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.home-name {
+    font-size: 20px;
+    color: $textcolor;
+    font-family: $subtitlecapsfont;
+}
+
+.introduction {
+    min-height: 50px;
+    margin: 15px 0px;
+}
+
+.home-links {
+    min-height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.home-link {
+    max-width: 100%;
+    font-family: $subtitlecapsfont;
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 18px;
+    line-height: 25px;
+    color: $backgroundcolor;
+    background-color: $linkcolor;
+    border: 15px double $backgroundcolor;
+    transition: 2s;
+    cursor: pointer;
+}
+
+.home-link:hover {
+    background-color: $linkcolorhover;
+    color: $textcolor;
+}
+
+.home-lookingfor {
+    margin-bottom: 20px;
+}
+
+.amie-trees {
+    background-image: url('../../media/icons/amie-trees.svg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    width: 100%;
+    height: 50px;
+}
+
+.amie-top {
+    min-height: 250px;
+    padding: 10px;
+    background-color: $backgroundcolor;
+    text-align: center;
+}
+
+.home-results .search-results .search {
+    display: none;
+} 

@@ -14,7 +14,7 @@ if ($name != '' && strpos($email, '@') !== false && $message != '') {
 
     $content = wordwrap($content,70);
 
-    mail("amie.ea.collins@gmail.com", $subject, $content);
+    mail("digitalwitch@gmail.com", $subject, $content);
 
 }
 

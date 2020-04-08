@@ -21,11 +21,21 @@
     font-size: 20px;
     font-family: $subtitlefont;
 }
-.results-contents { 
-    background-color: $backgroundcolor;
+
+.results {
+    max-width: 100%;
 }
+
+.results-contents { 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
 .result {
     width: 100%;
+    max-width: 450px;
     height: auto;
     transition: 1s;
     display: flex;
@@ -116,4 +126,37 @@
         max-height: 600px;
         opacity: 1;
     }
+}
+
+
+
+@media screen and (min-width: 500px) {
+
+    .result {
+        width: 48%;
+        justify-content: flex-start;
+    }
+
+    .results-contents {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .product-title {
+        font-size: 18px;
+    }
+    
+    .search-input {
+        width: 100%;
+    }
+
+    .search {
+        justify-content: center;
+    }
+    
+
+}
+ 
+@media screen and (min-width: 750px) {
+
 }

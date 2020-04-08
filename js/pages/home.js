@@ -20,7 +20,29 @@ export default {
             introduction: "",
             amie: {
                 link: "www.amiecollins.ca",
-                logo: "./media/icons/amie-icon.svg"
+                logo: "./media/icons/amie-icon.svg",
+                sociallinks: [
+                    {
+                        a: "https://www.facebook.com/amiecollinsdevelopment/",
+                        src: "./media/icons/facebook.svg",
+                        alt: "Like My Facebook Page"
+                    },
+                    {
+                        a: "https://twitter.com/AmieCollinsLdn",
+                        src: "./media/icons/twitter.svg",
+                        alt: "Follow Me on Twitter"
+                    },
+                    {
+                        a: "https://www.freelancer.ca/u/holisticwebdev",
+                        src: "./media/icons/freelancer.svg",
+                        alt: "Hire me on Freelancer"
+                    },
+                    {
+                        a: "https://github.com/amiecollins",
+                        src: "./media/icons/github.svg",
+                        alt: "Check out My GitHub Repositories"
+                    }
+                ]
             }
         }
     },
@@ -58,10 +80,10 @@ export default {
                 <div class="amie-text">
                     <h3>Are you Looking For Web Development or Graphic Design?</h3>
                     <p>Check out my portfolio at <a :href="amie.link">www.amiecollins.ca</a></p>
+                    <links :links="amie.sociallinks"></links>
                 </div>
                 <a :href="amie.link"><img class="amie-logo" :src="amie.logo" alt="Logo for Amie Collins Holistic Web Development"></a>
             </div>
-            <links :links="amie.sociallinks"></links>
         </div>
 
         <div class="home-new">

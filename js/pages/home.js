@@ -13,11 +13,11 @@ export default {
                     url: "contact"
                 },
                 {
-                    text: "Learn More",
+                    text: "My Socials",
                     url: "social"
                 }
             ],
-            introduction: "",
+            introduction: "This is my headquarters Witch, Pagan & Spiritual Design. If you find interest in my work or products you should definitely keep updated here, on social media or contact me directly.",
             amie: {
                 link: "www.amiecollins.ca",
                 logo: "./media/icons/amie-icon.svg",
@@ -48,8 +48,9 @@ export default {
     },
     
     methods: {
-        searchfunc: function (query) {
-            $emit("searchfunc", query)
+        setpage: function (page) {
+            console.log(page);
+            this.$emit("setpage", page);
         }
     },
 
@@ -66,12 +67,12 @@ export default {
 
         <div class="home-welcome">
             <h2>Welcome to<br><span class="home-name">Digital Witch Designs</span></h2>
-            <p class="introduction" v-text="introduction"></p>
+            <p class="introduction" v-text="introduction"></p><p class="introduction">Email me at <a @click="setpage('contact')">digitalwitch@amiecollins.ca</a></p>
             <links :links="sociallinks"></links>
         </div>
 
         <ul class="home-links">
-            <li v-for="link in homelinks"><div class="home-link" v-text="link.text" @click="$emit('setpage', link.url)"></div></li>
+            <li v-for="link in homelinks"><div class="home-link" v-text="link.text" @click="setpage(link.url)"></div></li>
         </ul>
 
         <div class="home-lookingfor">

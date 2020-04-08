@@ -6,6 +6,7 @@
     <title>Digital Witch</title>
     <link rel="stylesheet" href="https://use.typekit.net/tbt1yjd.css">
     <link rel="stylesheet" href="./styles/css/main.css">
+    <link rel="icon" href="./media/icons/logo.svg" type="image/x-icon">
 </head>
 
 <body>
@@ -36,7 +37,7 @@
 
 
         <div id="main-container">
-            <home v-bind:setpage="setpage" :sociallinks="main.sociallinks"></home>
+            <home v-on:setpage="setpage" :sociallinks="main.sociallinks"></home>
             <products></products>
             <contact></contact>
             <socialmedia :links="main.sociallinks"></socialmedia>
@@ -51,7 +52,6 @@
     </div>
 
 </body>
-
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script src="./js/index.js" type="module"></script>

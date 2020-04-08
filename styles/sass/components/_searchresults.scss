@@ -24,6 +24,7 @@
 
 .results {
     max-width: 100%;
+    overflow: hidden;
 }
 
 .results-contents { 
@@ -157,6 +158,8 @@
 
 }
  
-@media screen and (min-width: 750px) {
-
+@media screen and (min-width: 900px) {
+    .result {
+        width: 30%;
+    }
 }

@@ -5,7 +5,6 @@ import home from './pages/home.js'
 import products from './pages/products.js'
 import socialmedia from './pages/socialmedia.js'
 import contact from './pages/contact.js'
-import productsdata from './data/products.js'
 
 const vueIndex = (() => {
 
@@ -74,6 +73,7 @@ const vueIndex = (() => {
         methods: {
             setpage(page) {
                 var view = document.getElementById(page);
+                console.log(page);
                 view.scrollIntoView();
             }
             

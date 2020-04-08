@@ -31,3 +31,30 @@
     }
 
 }
+
+@media screen and (min-width: 1330px) {
+
+    #products {
+        min-width: 96vw;
+        margin: 50px 20vw 80px 0px;
+        height: auto;
+        .search {
+            margin-left: 30px;
+            justify-content: start;
+        }
+        .results {
+            padding: 20px;
+        }
+        .result {
+            width: 18%;
+        }
+    }
+
+    .products-title {
+        margin-left: 30px;
+        font-size: 50px;
+        text-align: left;
+    }
+
+
+}

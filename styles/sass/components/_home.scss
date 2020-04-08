@@ -17,11 +17,11 @@
 
 .introduction {
     min-height: 50px;
-    margin: 15px 0px;
+    margin: 13px 0px;
 }
 
 .home-links {
-    min-height: 230px;
+    min-height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -99,7 +99,7 @@
     }
 
     .introduction {
-        font-size: 25px;
+        font-size: 15px;
     }
     
     .home-welcome, .home-new {
@@ -169,6 +169,7 @@
     .home-lookingfor {
         width: 35%;
         margin: 0;
+        margin-top: -50px;
     }
 
     .amie-top {
@@ -178,7 +179,6 @@
     .home-new {
         width: 55%;
         height: 100%;
-        margin-top: 50px;
         height: auto;
     }
 
@@ -197,4 +197,90 @@
         padding: 20px;
     }
 
+}
+
+@media screen and (min-width: 900px) {
+
+    #home {
+        align-items: center;
+    }
+
+    .home-links {
+        max-width: 15%;
+        min-height: 260px;
+    }
+
+    .home-link {
+        font-size: 14px;
+    }
+
+    .amie-top {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .amie-text {
+            width: 50%;
+        }
+        a {
+            margin: 0;
+        }
+        .link-container {
+            width: 185%;
+        }
+    }
+    .home-lookingfor {
+        height: auto;
+    }
+    .home-welcome {
+        width: 40%;
+    }
+    .home-new {
+        margin-top: 10px;
+        width: 100%;
+        max-height: 50%;
+    }
+    .home-name {
+        font-size: 30px;
+    }
+}
+
+
+@media screen and (min-width: 1330px) {
+    #home {
+        padding-top: 40px;
+    }
+    .home-welcome, .home-links {
+        height: 280px;
+        padding: 20px;
+    }
+
+    .amie-top .link-container {
+        width: 100%;
+    }
+
+    .home-welcome {
+        width: 50%;
+        .home-name {
+            font-size: 40px;
+        }
+        .introduction {
+            font-size: 18px;
+        }
+        .link-container {
+            width: 30%;
+            margin-right: 100%;
+        }
+    }
+
+    .home-lookingfor {
+        width: 26%;
+        margin-top: -100px;
+    }
+
+    .home-new {
+        margin-top: 50px;
+        .result {
+            width: 23%;
+        }
+    }
 }

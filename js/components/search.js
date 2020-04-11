@@ -6,12 +6,14 @@ export default {
         return {
             icon: "./media/icons/search.svg",
             query: "",
+            activequery: "",
             results: productsdata
         }
     },
     
     methods: {
         search (query) {
+            this.activequery = query;
             var results = [];
             console.log(query);
             if (query === "See All") {
@@ -69,9 +71,9 @@ export default {
         <div class="search">
             <h2 class="hidden">Search Products</h2>
             <img class="search-icon" @click="search(query)" :src="icon" alt="Click to Search Products">
-            <input class="search-input" v-model="query" @change="search(query)" type="text">
+            <input class="search-input" v-model="query" v-on:change="search(query)" type="text">
         </div>
-        <results v-bind:results.sync="results" v-if="results != ''"></results>
+        <results v-bind:results.sync="results" v-if="activequery != ''"></results>
     </section>
     
     `

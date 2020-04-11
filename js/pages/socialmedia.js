@@ -13,7 +13,7 @@ export default {
     },
 
     props: [
-        "links"
+        "links", "socialsize"
     ],
 
     components: {
@@ -35,15 +35,6 @@ export default {
                 </div>
                 <links :links="links"></links>
             </div>
-
-            <div class="social-feeds">
-
-                <div class="fb-page" data-href="https://www.facebook.com/digitalwitchdesigns/" data-tabs="timeline" data-width="300" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/digitalwitchdesigns/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/digitalwitchdesigns/">Digital Witch</a></blockquote></div>
-
-                <div class="fb-group" data-href="https://www.facebook.com/groups/214955102933772/" :data-width="width" data-show-social-context="true" data-show-metadata="true"></div>
-
-            </div>
-
         </div>
     </section>
     `

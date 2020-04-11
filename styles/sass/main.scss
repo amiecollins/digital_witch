@@ -74,7 +74,7 @@ footer {
     font-size: 12px;
 }
 
-header img {
+header > img {
     max-height: 50px;
 }
 
@@ -173,12 +173,14 @@ footer .link-container {
     }
 }
 
+
 #main-container {
     display: flex;
     flex-direction: column;
-    width: 96%;
+    width: 96vw;
     height: auto;
-    padding: 100px 2%;
+    padding: 100px 2vw;
+    align-items: center;
 }
 
 @media screen and (min-width: 500px) {

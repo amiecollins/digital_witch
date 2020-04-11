@@ -7,6 +7,7 @@
     background-color: $backgroundcolor;
     padding: 15px;
     margin-bottom: 20px;
+    max-width: 100%;
 }
 
 .home-name {
@@ -66,14 +67,24 @@
     text-align: center;
     display: flex;
     flex-direction: column;
+    .link-container {
+        margin-top: 10px;
+    }
 }
 
-.home-results .search-results .search {
-    display: none;
-} 
+.home-results {
+    max-width: 100%;
+    .search-results .search {
+        display: none;
+    }
+    .result {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
 
 .home-new {
-    width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;

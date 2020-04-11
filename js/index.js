@@ -59,6 +59,7 @@ const vueIndex = (() => {
                         alt: "Join our Facebook Group"
                     }
                 ],
+                socialsize: 300
             },
             burger: {
                 img: "./media/icons/burger.svg",
@@ -75,10 +76,21 @@ const vueIndex = (() => {
                 var view = document.getElementById(page);
                 console.log(page);
                 view.scrollIntoView();
+            },
+            checkSize() {
+                if (window.innerWidth <= 500) {
+                    this.main.socialsize = 250;
+                  } else {
+                    this.main.socialsize = 400;
+                  }
             }
-            
+    
         },
-
+        
+        created: function () {
+            this.checkSize();
+            window.addEventListener('resize', this.checkSize);
+        },
 
         components: {
             links, search, home, products, socialmedia, contact
